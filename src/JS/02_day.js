@@ -49,11 +49,11 @@ console.log(`Campare between ${num1} to ${num2} first with == and the result is:
 
 
 // ACTIVITY - 4 Logical Operators.
-// Task:11 write a program  that uses the && operator to combine two condition  and log the result to the console.
+// Task:11,12,13 write a program  that uses the && operator to combine two condition  and log the result to the console.
 
 console.log(`Campare between two conditions fist is ${true} and another is ${false} and the result is:-> ${true && false}. And now campare with || and the result is:-> ${true || false}. And now using ! and the result is:-> ${!true} `);
 
 // ACTIVITY - 5 Ternary Operators.
-// Task:8 write a program that uses the ternary operator to check if a number is positive or negative and log the result to the console.
+// Task:14 write a program that uses the ternary operator to check if a number is positive or negative and log the result to the console.
 
 console.log(`Ternary operator result is:-> The number ${num1} is ${num1 > 0 ? 'positive' : 'negative'}.`);
