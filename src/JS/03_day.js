@@ -42,7 +42,7 @@ if (num1 > num2) {
 
 
 // ACTIVITY - 3 Switch Case.
-// Task:4 write a program that  uses a switch case to determine the day of the week based on number (1-7) and log the day name to he console.
+// Task:4 write a program that uses a switch case to determine the day of the week based on number (1-7) and log the day name to he console.
 
 const day = 7;
 switch (day) {
@@ -56,7 +56,7 @@ switch (day) {
     default: console.log('Please enter the correct value.');
 }
 
-// Task:5 write a program that  uses a switch case to assign a grade ('A', 'B', 'C', 'D', 'F') based on a score and log the grade to he console.
+// Task:5 write a program that uses a switch case to assign a grade ('A', 'B', 'C', 'D', 'F') based on a score and log the grade to he console.
 const score = 50;
 let grade = '';
 switch (true) {
@@ -80,7 +80,7 @@ console.log(`Score: ${score} and Grade: ${grade}`);
 
 
 // ACTIVITY - 4 Conditional (Ternary) Operator.
-// Task:6 write a program that  uses ternary operator to check if a number is even or odd and log the result to the console.
+// Task:6 write a program that uses ternary operator to check if a number is even or odd and log the result to the console.
 
 const number = 10;
 const numIs = number % 2 === 0 ? `${number} is even` : `${number} is odd`;
