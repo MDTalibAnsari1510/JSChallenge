@@ -2,7 +2,6 @@
 
 // ACTIVITY - 1 If-Else  Statements.
 // Task:1 write a program to check if number is positive, negative or zero and log the result to the console.
-
 const num = -1;
 if (num === 0) {
     console.log('The number is zero.');
@@ -43,7 +42,6 @@ if (num1 > num2) {
 
 // ACTIVITY - 3 Switch Case.
 // Task:4 write a program that uses a switch case to determine the day of the week based on number (1-7) and log the day name to he console.
-
 const day = 7;
 switch (day) {
     case 1: console.log('Sunday'); break;
@@ -81,7 +79,6 @@ console.log(`Score: ${score} and Grade: ${grade}`);
 
 // ACTIVITY - 4 Conditional (Ternary) Operator.
 // Task:6 write a program that uses ternary operator to check if a number is even or odd and log the result to the console.
-
 const number = 10;
 const numIs = number % 2 === 0 ? `${number} is even` : `${number} is odd`;
 console.log(numIs);
@@ -89,7 +86,6 @@ console.log(numIs);
 
 // ACTIVITY - 5 Combining Conditions.
 // Task:7 write a program to check if a year is a leap year using multiple conditions (divisible by 4, but not 100 unless also divisible by 400) and log the result to the console.
-
 const year = 1900;
 if ((year % 400 === 0) || (year % 4 === 0 && year % 100 !== 0)) {
     console.log('The year is leap year');
