@@ -13,7 +13,7 @@ if (num === 0) {
 }
 
 // Task:2 write a program to check if a person is eligible to vote (age >=18) and log the result to the console.
-const age = 17;
+const age = 19;
 if (age >= 18) {
     console.log(`Person is eligible to vote, His age is ${age}.`);
 } else {
