@@ -1,7 +1,7 @@
 // Day 4: Loops.
 
 // ACTIVITY - 1 For Loop.
-// Task:1 write a program to print numbers from 1 to 10 using a for loop.
+// Task:1 Write a program to print numbers from 1 to 10 using a for loop.
 for (let i = 1; i <= 10; i++) {
     console.log(i)
 }
@@ -13,7 +13,7 @@ for (let i = 1; i <= 10; i++) {
 
 
 // ACTIVITY - 2 While Loop.
-// Task:3 write a program to calculate the sum of numbers from 1 to 10 using a while loop.
+// Task:3 Write a program to calculate the sum of numbers from 1 to 10 using a while loop.
 let z = 1;
 let sum = 0;
 while (z <= 10) {
@@ -22,7 +22,7 @@ while (z <= 10) {
 }
 console.log(`The sum of numbers from 1 to 10 is: ${sum}.`);
 
-// Task:4 write a program to print numbers from 10 to 1 using a while loop.
+// Task:4 Write a program to print numbers from 10 to 1 using a while loop.
 let y = 10;
 while (y > 0) {
     console.log(y)
@@ -31,7 +31,7 @@ while (y > 0) {
 
 
 // ACTIVITY - 3 Do...While Loop.
-// Task:5 write a program to print numbers from 1 to 5 using a do...while loop.
+// Task:5 Write a program to print numbers from 1 to 5 using a do...while loop.
 console.log(`Write a program to print numbers from 1 to 5 using a do...while loop.`);
 let x = 1;
 do {
@@ -52,7 +52,7 @@ console.log(`The factorial of ${no} is: ${fact}.`);
 
 
 // ACTIVITY - 4 Nested Loops.
-// Task:7 write a program to print a pattern using nested for loop.
+// Task:7 Write a program to print a pattern using nested for loop.
 let star = ''
 for (let i = 0; i < 5; i++) {
     for (let j = 0; j <= i; j++) {
@@ -64,7 +64,7 @@ console.log(star);
 
 
 // ACTIVITY - 4 Loop Control Statements.
-// Task:8 write a program to print numbers from 1 to 10, but skip the number 5 using continue statement.
+// Task:8 Write a program to print numbers from 1 to 10, but skip the number 5 using continue statement.
 for (let i = 1; i <= 10; i++) {
     if (i === 5) {
         continue;
@@ -72,7 +72,7 @@ for (let i = 1; i <= 10; i++) {
     console.log(i);
 }
 
-// Task:9 write a program to print numbers from 1 to 10, but stop the loop when the number is 7 using the break statement.
+// Task:9 Write a program to print numbers from 1 to 10, but stop the loop when the number is 7 using the break statement.
 for (let i = 1; i <= 10; i++) {
     if (i === 7) {
         break;
