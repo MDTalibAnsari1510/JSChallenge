@@ -9,7 +9,7 @@ function checkEvenOdd(num) {
         console.log(`${num} is odd.`);
     }
 }
-checkEvenOdd(2);
+checkEvenOdd(10);
 
 // Task:2 Write a function to calculate the square of a number and return the result.
 function numberSquare(num) {
