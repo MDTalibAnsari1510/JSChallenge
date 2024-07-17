@@ -41,13 +41,27 @@ console.log(`Concatenated two string is ${concatenateString('Talib ', 'Ansari')}
 const sumOfTwoNumber = (num1, num2) => num1 + num2;
 console.log(`Sum of two number is ${sumOfTwoNumber(30, 40)}`);
 
-// Task:6 Write an arrow function to check if a string contains a specific characters and return a boolean value.
-const isSpecificCharInString = (str) => {
+// Task:6 Write an arrow function to check if a string contains a specific character and return a boolean value.
+const isSpecificCharInString = (str, char) => {
     for (let i = 0; i < str.length; i++) {
-        const element = array[i];
-        if (str[i] === '~' || str[i] === '`' || str[i] === '!' || str[i] === '@' || str[i] === '#' || str[i] === '$' || str[i] === '%' || str[i] === '^' || str[i] === '&' || str[i] === '*' || str[i] === '(' || str[i] === ')' || str[i] === '-' || str[i] === '_' || str[i] === '+' || str[i] === '=' || str[i] === '{' || str[i] === '}' || str[i] === '[' || str[i] === ']' || str[i] === '|' ||/*str[i]=== "\" ||*/str[i] === '/' || str[i] === ':' || str[i] === ';' || str[i] === '"' || str[i] === "'" || str[i] === '<' || str[i] === '>' || str[i] === ',' || str[i] === '.' || str[i] === '?') return 
-        
+        // if (str[i] === '~' || str[i] === '`' || str[i] === '!' || str[i] === '@' || str[i] === '#' || str[i] === '$' || str[i] === '%' || str[i] === '^' || str[i] === '&' || str[i] === '*' || str[i] === '(' || str[i] === ')' || str[i] === '-' || str[i] === '_' || str[i] === '+' || str[i] === '=' || str[i] === '{' || str[i] === '}' || str[i] === '[' || str[i] === ']' || str[i] === '|' ||/*str[i]=== "\" ||*/str[i] === '/' || str[i] === ':' || str[i] === ';' || str[i] === '"' || str[i] === "'" || str[i] === '<' || str[i] === '>' || str[i] === ',' || str[i] === '.' || str[i] === '?')
+        //     return true
+        if (str[i] === char) return true;
+        return false;
     }
 }
+console.log(`String Contains a specific character ${isSpecificCharInString('talib', 'z')}`);
 
 
+// ACTIVITY - 4 Function Parameters and Default Values.
+// Task:7 Write a function that takes two parameters and returns their product. Provide a default value for second parameter.
+function productOfTwoValue(num1, num2 = 0) {
+    return num1 + num2;
+}
+console.log(`The product of two values is ${productOfTwoValue(10)}`);
+
+// Task:8 Write a function that takes a person's name and age and return a greeting message. Provide the default value for the age.
+function greetingMessage(person, age = 18){
+    return `Hi ${person}, \nI hope you are well.\nHappiest your ${age} Birthday.`
+}
+console.log(`${greetingMessage('Talib',10)}`);
