@@ -38,8 +38,39 @@ console.log(`create a new array with event numbers, ${array1.filter(ele => ele %
 console.log(`calculate the sum of all numbers, ${array1.reduce((acc, arr) => acc += arr, 0)}`);
 
 
-// ACTIVITY - 3 Array Iteration.
+// ACTIVITY - 4 Array Iteration.
 // Task:10 Use a 'for' loop to iterate over the array and log each element to the console.
 for (let i = 0; i < array1.length; i++) {
     console.log(`For loop iteration ${i + 1} is ${array1[i]}`);
 }
+
+// Task:11 Use a 'forEach' method to iterate over the array and log each element to the console.
+array1.forEach((ele, i) => console.log(`Iterate over the array useing forEach ${ele}`));
+
+
+// ACTIVITY - 5 Multi-Dimensional Arrays.
+// Task:12 Create a two-dimensional array (matrix) and log the entire array to the console.
+array2 = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+array2.forEach((element, i) => {
+    let innerEle = '';
+    element.forEach(ele => {
+        innerEle += `${ele} `
+    });
+    console.log(`${i + 1} Row: ${innerEle}`);
+});
+
+// Task:13 Access and log a specific element from the two-dimensional array.
+function isSpecificElementExist(arr, ele) {
+    let exist
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr.length; j++) {
+            if (arr[i][j] === ele) return `Exist and element is ${arr[i][j]}`;
+        }
+    }
+    return `Not Exist`;
+}
+console.log(`Access and log a specific element from the two-dimensional array: ${isSpecificElementExist(array2, 19)}`);
