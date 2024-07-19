@@ -24,8 +24,32 @@ book.updateYear = function (year) {
     this.year = year;
 }
 book.updateYear(2000);
-console.log(`Updated Object: `,book);
+console.log(`Updated Object: `, book);
 
 
 // ACTIVITY - 3 Nested Objects.
 // Task:5 Create a nested object representing a library with properties like name, book (an array of book objects), and log the library object to the console.
+const library = {
+    name: "Programming BookBar",
+    books: [
+        {
+            title: "JavaScript",
+            author: "Brendan Eich",
+            year: 1995
+        },
+        {
+            title: "Java",
+            author: "James Gosling",
+            year: 1995
+        }
+    ]
+}
+console.log(library);
+
+// Task:6 Access and log the name of the library and title the title of all the books in the library.
+console.log(`The name of Library: ${library.name}`);
+library.books.forEach((ele, i) => console.log(`${i + 1} book title is ${ele.title}`));
+
+
+// ACTIVITY - 4 The 'this' Keyword.
+// Task:7 Create a nested object representing a library with properties like name, book (an array of book objects), and log the library object to the console.
