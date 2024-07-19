@@ -15,7 +15,7 @@ console.log(`The title of book is ${book.title} and author is ${book.author}.`);
 
 // ACTIVITY - 2 Object Methods.
 // Task:3 Add a method to the book that returns a string with the book title, author and log the result of calling this method.
-book.returnString = () => `The book title is ${this.title} and author is ${this.author}.`
+book.returnString = function () { return `The book title is ${this.title} and author is ${this.author}.` }
 
 console.log(book.returnString());
 
@@ -52,4 +52,13 @@ library.books.forEach((ele, i) => console.log(`${i + 1} book title is ${ele.titl
 
 
 // ACTIVITY - 4 The 'this' Keyword.
-// Task:7 Create a nested object representing a library with properties like name, book (an array of book objects), and log the library object to the console.
+// Task:7 Add a method to the book object that uses the 'this' kayword to return a string with the book's title and year , and log the result of calling this method.
+book.returnTitleAndYear = function () { return `The Book title: ${this.title}, and year: ${this.year}.` }
+console.log(book.returnTitleAndYear());
+
+
+// ACTIVITY - 5 Object Iteration.
+// Task:8 Use a for...in loop to iterate over the properties of the book object and log each property and its value.
+for (const key in book) {
+    console.log(`The book property: ${key} and value: ${book[key]}`);
+}
