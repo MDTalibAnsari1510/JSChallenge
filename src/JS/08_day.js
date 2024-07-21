@@ -54,3 +54,20 @@ console.log(`\nThe Product of two params: ${productOfParams(2)}`);
 
 // ACTIVITY - 4 Enhance Object Literals
 // Task:8 Use enhace object literals to create an object with method and propeties, and log the object to the console.
+const nameP = "Talib";
+const age = 24
+const personObj = {
+    nameP,
+    age,
+    printMyname() {
+        console.log(`My name is ${this.nameP} and age is ${this.age}.`);
+    }
+}
+console.log(`\n`, personObj);
+
+// Task:9 Create an object with computed property names based on varibles and log the object to the console.
+const key1 = "One";
+const numObj = {
+    [key1]: 10
+}
+console.log(`\n`, numObj);
