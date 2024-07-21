@@ -33,7 +33,7 @@ ul.removeChild(ul.lastChild);
 
 
 // ACTIVITY - 4 Modifying Attributes and Classes
-// Task:7 Select an HTML element and change one of its attributes (e.g. 'src' of an 'img' tag)
+// Task:7 Select an HTML element and change one of its attributes (e.g. 'src' of an 'img' tag).
 const img = document.getElementById('img');
 img.src = `/home/swanbay04/Pictures/Screenshots/Screenshot from 2023-11-21 13-08-30.png`;
 
@@ -51,7 +51,7 @@ saveBtn.addEventListener('click', (e) => {
     e.target.innerText = 'Submit'
 });
 
-// Task:10 Add a mouseover  event listner to an element that change the text content of a paragraph.
+// Task:10 Add a mouseover event listner to an element that change the text content of a paragraph.
 saveBtn.addEventListener('mouseover', (e) => {
     e.target.style = 'border-radius: 11px;border-color: darkred;'
 });
