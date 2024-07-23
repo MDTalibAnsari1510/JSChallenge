@@ -5,16 +5,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript 30 day challenge</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+
+        label,
+        input,
+        button {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+        }
+
+        button[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        select {
+            padding: 8px;
+            font-size: 16px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 10px;
+            margin-bottom: 5px;
+            background-color: #f0f0f0;
+            cursor: pointer;
+        }
+
+        li:hover {
+            background-color: #e0e0e0;
+        }
+
+        #container {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        button {
+            margin: 5px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
-<body class="body">
+<body class="body" id="bdy" style="">
     <h2 id="title">Hello, Welcome to 30 days js challenge.</h2>
     <ul id="ul"></ul>
-    <div id="img" style="visibility: hidden;">
+    <div id="img" style="visibility: visible;">
         <img src="/home/swanbay04/Pictures/Screenshots/Screenshot from 2023-11-12 11-31-55.png" id="imag" alt="img">
     </div>
     <p id="paragraph">Initial text content.</p>
+    <input type="text" name="key" id="key">
     <button id="save">Save</button>
+
+    <label for="cars">Choose a car: <span id="para"></span> </label>
+    <select id="cars" name="cars">
+        <option id="volvo" value="volvo">Please select car...</option>
+        <option id="volvo" value="volvo">Volvo</option>
+        <option id="saab" value="saab">Saab</option>
+        <option id="mercedes" value="mercedes">Mercedes</option>
+        <option id="audi" value="audi">Audi</option>
+    </select>
+
+    <ul id="myList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ul>
+
+    <form id="myForm" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name..." required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email..." required>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="container">
+        <button>Button 1</button>
+        <button>Button 2</button>
+    </div>
 
     <!-- <script src="./JS/09_day.js"></script> -->
     <script src="./JS/10_day.js"></script>
