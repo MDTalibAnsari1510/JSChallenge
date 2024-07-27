@@ -83,3 +83,69 @@ function handleCustomError() {
 handleCustomError();
 
 // Task:5 Write a function that validates user input (e.g, checking if a string is not empty) and throws a custom error if the validator fails. Handle the custom error using try-catch block.
+function validateInput(input) {
+    if (typeof input !== 'string' || input.trim() === '') {
+        throw new CustomError('Input must be a non-empty string.');
+    }
+}
+// validateInput('');
+
+
+// ACTIVITY - 4 Error Handling Promises
+// Task:6 Create a promise that radomly resolves and rejects. use '.catch' to handle the rejection and log an appropriate message to the console.
+const promise = () => {
+    return new Promise((resolve, reject) => {
+        const randomDelay = Math.random() * 3000;
+        setTimeout(() => {
+            const randomNum = Math.random();
+            if (randomNum < 0.5) {
+                resolve('Success!');
+            } else {
+                reject(new CustomError('Randomly failed!'));
+            }
+        }, randomDelay);
+    })
+}
+
+promise().then(res => console.log(res)).catch(err => console.log(err));
+
+// Task:7 Use try-catch within an async function to handle errors from a promise that radomly resolve or rejects and log the error the error message.
+async function handlePromise() {
+    try {
+        const response = await promise();
+        console.log(response);
+    } catch (error) {
+        console.log(error);
+    }
+}
+handlePromise();
+
+
+// ACTIVITY - 5 Graceful Error Handling in Fetch
+// Task:8 Use the fetch API to request from an invaild URL and handle the error using '.catch()'. Log an appropriate error message to the console.
+const invalidUrl = 'https://jsonplaceholder.typicode.com/todos';
+fetch(invalidUrl)
+    .then(response => {
+        if (!response.ok) {
+            throw new CustomError('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log('Data:', data);
+    })
+    .catch(error => {
+        console.error('Fetch Error:', error.message);
+    });
+
+// Task:9 Use the fetch API to request from an invaild URL within an async function and handle the error using try-catch. Log an appropriate error message.
+async function getUrlData(url) {
+    try {
+        const response = await fetch(url);
+        const result = await response.json();
+        console.log("Result is: ", result);
+    } catch (error) {
+        console.log("error: ", error);
+    }
+}
+getUrlData(invalidUrl);
