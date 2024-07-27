@@ -23,6 +23,18 @@ console.log(`Check the year is leap Year: ${checkLeapYear(1900)}`);
 
 
 // ACTIVITY - 3 Importing Entire Modules
-// Task:3 Create a module that export multiple constants and funtions. Import the entire module as an object in another script and use its properties.
+// Task:5 Create a module that export multiple constants and funtions. Import the entire module as an object in another script and use its properties.
 import * as exporting from './exporting.mjs';
-console.log(exporting)
+console.log(exporting);
+
+
+// ACTIVITY - 4 Using Third-Party Modules
+// Task:6 Install a third-party module (e.g., lodash) using npm. import and use a function from this module in a script.
+//  complete in webpack folder
+// Task:7 Install a third-party module (e.g., axios) using npm. import and use this module to make a network requet in a script.
+//  complete in webpack folder
+
+
+// ACTIVITY - 5 Module Bundling (Optional)
+// Task:8 Use a module bundler like webpack or Parcel to bundle multile javascript files into a single file. write a script to demonstrate the bundling process.
+//  complete in webpack folder
