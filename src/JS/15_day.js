@@ -1,4 +1,4 @@
-// Day 14: Closures
+// Day 15: Closures
 
 // ACTIVITY - 1 Understanding Closures
 // Task:1 Write a function that returns another functions, where the inner function accesses a variable from the ouer function scope. Call the inner funtion and log the result.
