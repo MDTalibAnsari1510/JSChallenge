@@ -77,16 +77,32 @@ console.log(`The maximum number from an array: ${maxElement([1, 20, 3, 4, 5, 6, 
 
 // ACTIVITY - 3 String Manipulation with Recursion
 // Task:5 Write a recursive function to reverse a string. Log the result for a few test cases.
-function reverseString(str, revStr = '') {
-    if (str.length == revStr.length) {
-        return revStr;
+function reverseString(str, revStr = '', i = str.length - 1) {
+    if (i <= 0) {
+        return revStr += str[i];
     }
-    revStr = str
-    return reverseString(str[str.length - 1])
+    revStr += str[i];
+    return reverseString(str, revStr, i - 1)
 }
 
-// Task:6 Write a recursive function to check if a string is a palindrome. Log the result for a few test cases.
+function reverseStrings(str, i = str.length - 1) {
+    if (i < 0) {
+        return '';
+    }
+    return str[i] + reverseStrings(str, i - 1);
+}
+console.log(`Reverse String: `, reverseString('Hello'));
+console.log(`Reverse String: `, reverseStrings('Hello'));
 
+// Task:6 Write a recursive function to check if a string is a palindrome. Log the result for a few test cases.
+function isPalindrome(str, i = str.length - 1, j = 0) {
+    if (j >= i) {
+        return true;
+    }
+    if (str[i] != str[j]) return false;
+    return isPalindrome(str, i - 1, j + 1);
+}
+console.log(`Check String is palindrome: `, isPalindrome('man nam'));
 
 
 // ACTIVITY - 4 Recursive Search
