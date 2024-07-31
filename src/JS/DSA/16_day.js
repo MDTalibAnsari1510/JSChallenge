@@ -107,7 +107,22 @@ console.log(`Check String is palindrome: `, isPalindrome('man nam'));
 
 // ACTIVITY - 4 Recursive Search
 // Task:7 Write a recursive function to perform a binary search on a sorted array. Log the index of the target element for a few test cases.
+function binarySearch(arr, target, low = 0,  high = arr.length) {
+    if (low > high) {
+        return -1
+    }
+    const mid = Math.floor((high + low) / 2);
+    if (arr[mid] === target) {
+        return mid;
+    }
+    if (arr[mid] > target) {
+        return binarySearch(arr, target, low, mid - 1);
+    } else {
+        return binarySearch(arr, target, mid + 1, high);
+    }
 
+}
+console.log("Search target using Binary Search: ", binarySearch([1, 2, 3, 4, 5, 6, 7], 7));
 // Task:8 Write a recursive function to to count  occurrances of a target element in an array. Log the result for a few test cases.
 
 
