@@ -106,7 +106,6 @@ function getAndSetDataInStorage(key, value) {
     console.log('Local Storage:', localStorage.getItem(key));
     console.log('session Storage:', sessionStorage.getItem(key));
 }
-
 getAndSetDataInStorage('abc', "wertyuioiuytrewsdfnm,");
 
 // Task:10 Write a function that clears all data from both localStorage and sessionStorage. Varify that both storages are empty.
