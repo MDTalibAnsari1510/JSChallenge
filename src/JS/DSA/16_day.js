@@ -107,7 +107,7 @@ console.log(`Check String is palindrome: `, isPalindrome('man nam'));
 
 // ACTIVITY - 4 Recursive Search
 // Task:7 Write a recursive function to perform a binary search on a sorted array. Log the index of the target element for a few test cases.
-function binarySearch(arr, target, low = 0,  high = arr.length) {
+function binarySearch(arr, target, low = 0, high = arr.length - 1) {
     if (low > high) {
         return -1
     }
@@ -123,9 +123,17 @@ function binarySearch(arr, target, low = 0,  high = arr.length) {
 
 }
 console.log("Search target using Binary Search: ", binarySearch([1, 2, 3, 4, 5, 6, 7], 7));
-// Task:8 Write a recursive function to to count  occurrances of a target element in an array. Log the result for a few test cases.
 
+// Task:8 Write a recursive function to count occurrances of a target element in an array. Log the result for a few test cases.
+function countTargetOccurrances(arr, target, i = 0) {
+    if (i > arr.length) {
+        return 0;
+    }
+    const counter = arr[i] === target ? 1 : 0;
+    return counter + countTargetOccurrances(arr, target, i + 1);
 
+}
+console.log('Count occurrances of a target element', countTargetOccurrances([1, 2, 3, 4, 5, 6, 6, 6, 7, 7, 1, 2, 3], 3))
 // ACTIVITY - 5 Tree Traversal (Optional)
 // Task:9 Write a recursive function to perform an in-order traversal of a binary tree. Log the nodes as they are visited.
 
