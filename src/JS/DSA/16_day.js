@@ -133,7 +133,9 @@ function countTargetOccurrances(arr, target, i = 0) {
     return counter + countTargetOccurrances(arr, target, i + 1);
 
 }
-console.log('Count occurrances of a target element', countTargetOccurrances([1, 2, 3, 4, 5, 6, 6, 6, 7, 7, 1, 2, 3], 3))
+console.log('Count occurrances of a target element', countTargetOccurrances([1, 2, 3, 4, 5, 6, 6, 6, 7, 7, 1, 2, 3], 3));
+
+
 // ACTIVITY - 5 Tree Traversal (Optional)
 // Task:9 Write a recursive function to perform an in-order traversal of a binary tree. Log the nodes as they are visited.
 
