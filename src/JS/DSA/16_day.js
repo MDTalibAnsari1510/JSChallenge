@@ -138,6 +138,43 @@ console.log('Count occurrances of a target element', countTargetOccurrances([1, 
 
 // ACTIVITY - 5 Tree Traversal (Optional)
 // Task:9 Write a recursive function to perform an in-order traversal of a binary tree. Log the nodes as they are visited.
+class Node {
+    constructor(data) {
+        this.node = data;
+        this.left = null;
+        this.right = null;
+    }
+}
+
+const root = new Node(1);
+root.left = new Node(2);
+root.right = new Node(3);
+root.left.left = new Node(4);
+root.left.right = new Node(5);
+root.right.left = new Node(6);
+root.right.right = new Node(7);
+root.right.right.right = new Node(8);
+root.right.right.right.left = new Node(9);
+root.right.right.right.left.left = new Node(10);
+root.right.right.right.left.right = new Node(11);
+function inOreder(tree, arr = []) {
+    if (tree == null) return;
+    inOreder(tree.left, arr);
+    arr.push(tree.node);
+    inOreder(tree.right, arr);
+    return arr;
+}
+console.log('In-Order Traversal: ', inOreder(root));
 
 // Task:10 Write a recursive function to calculate the depth of a binary tree. Log the result for a few test cases.
-
+function calculateDepth(tree) {
+    if (tree === null) return 0;
+    const leftDepth = calculateDepth(tree.left);
+    const rightDepth = calculateDepth(tree.right);
+    if (leftDepth > rightDepth) {
+        return leftDepth + 1;
+    } else {
+        return rightDepth + 1;
+    }
+}
+console.log(`Depth of tree: `, calculateDepth(root));
