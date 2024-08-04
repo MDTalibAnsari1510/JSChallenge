@@ -127,7 +127,70 @@ console.log(`Longest Sub-String: `, longestSubString(`Write a function to rotate
 
 // ACTIVITY - 4 Array Algorithms
 // Task:8 Write a function to rotate an array by k place position. Log the rotated array.
+function rotate(array, k) {
+    const d = (k % array.length);
+    if (d == 0 || array.length == 0) return array;
+    const temp = [];
+    for (let i = 0; i < d; i++) {
+        temp[i] = array[i];
+    }
+    for (let i = 0; i < array.length - d; i++) {
+        array[i] = array[i + d];
+    }
+    for (let i = 0; i < temp.length; i++) {
+        array[array.length - temp.length + i] = temp[i];
+    }
+    return array;
+}
+
+console.log(`Rotated Array: `, rotate([1, 2, 3, 4, 5, 6, 7, 8, 9], 1));
+
+function rotateWithTwoPointer(array, k) {
+    const n = array.length;
+    k = k % n;
+    if (k === 0 || n === 0) return array;
+    function reverse(start, end) {
+        while (start < end) {
+            const temp = array[start];
+            array[start] = array[end];
+            array[end] = temp;
+            start++;
+            end--;
+        }
+    }
+    reverse(0, n - 1);
+    reverse(0, k - 1);
+    reverse(k, n - 1);
+    return array;
+}
+
+console.log('Rotated Array:', rotateWithTwoPointer([1, 2, 3, 4, 5, 6, 7, 8, 9], 12));
+
 // Task:9 Write a function to merge two sorted arrays into a one sorted array. Log the merged array.
+function mergeTwoSortedArray(array1, array2) {
+    const newArray = [];
+    let firstIndexStart = 0;
+    let secondIndexStart = 0;
+    let i = 0;
+    while (firstIndexStart < array1.length && secondIndexStart < array2.length) {
+        if (array1[firstIndexStart] < array2[secondIndexStart]) {
+            newArray[i] = array1[firstIndexStart];
+            firstIndexStart++;
+        } else {
+            newArray[i] = array2[secondIndexStart];
+            secondIndexStart++;
+        }
+        i++;
+    }
+    while (firstIndexStart < array1.length) {
+        newArray[i++] = array1[firstIndexStart++];
+    }
+    while (secondIndexStart < array2.length) {
+        newArray[i++] = array2[secondIndexStart++];
+    }
+    return newArray;
+}
+console.log(`Merge Two sorted Array: `, mergeTwoSortedArray([1, 4, 5, 6, 9, 44, 45, 46, 47, 55, 66, 77, 88, 99, 666, 777, 888, 999], [2, 3, 4, 6, 8, 11, 22, 33, 44]))
 
 
 // ACTIVITY - 5 Dynamic Programming (Optional)
