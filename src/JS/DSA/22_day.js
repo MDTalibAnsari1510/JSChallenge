@@ -1,4 +1,4 @@
-// Day 21: LeetCode Easy
+// Day 22: LeetCode Medium
 
 // ACTIVITY - 1 Add Two Numbers 
 // Task:1 Solve the "Add Two Numbers" Problem on LeetCode.
