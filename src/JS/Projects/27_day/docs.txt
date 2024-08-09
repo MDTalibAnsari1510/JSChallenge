@@ -1,25 +1,25 @@
-Day 26: Projects - Chat Application
+Day 26: Projects - TaskManagement App
 
 ACTIVITY - 1 Setting Up the Project 
-Task:1 Initialize a new project directory and set up the basic HTML structure for the chat application.
-Task:2 Add a basic CSS file to style the chat application, including a chat window and inputarea.
+Task:1 Initialize a new project directory and set up the basic HTML structure for the task managements app.
+Task:2 Add a basic CSS file to style the task management app, including a cantainer for displaying tasks and a form for adding new tasks.
 
 
-ACTIVITY - 2 Setting Up WebSocket Server 
-Task:3 Set up a simple webSocket server using node.js and the "ws" library. Write a script to create the server and handle connections.
-Task:4 Test the WebSocket server by logging messages when clients connect and disconnect.
+ACTIVITY - 2 Creating Tasks 
+Task:3 Add a form to the HTML structure with fields for entering task details (e.g., title, description, due date). Style the form using CSS.
+Task:4 Write a script to handleform submission, Creating a new task object and adding it to an array of tasks. Display the new task in the task list.
 
 
-ACTIVITY - 3 Establishing WebSocket Connection
-Task:5 Add a script to the HTML file to establish a WebSocket connection to the server.
-Task:6 Write functions to handle sending and receiving messages through the WebSocket connection. Log received messages to the console.
+ACTIVITY - 3 Reading and Displaying Tasks
+Task:5 Write a function to iterate over the array of tasks and display each task in the task list. Including task details like title, description, and due date.
+Task:6 Style the task list using CSS to make it visually appealing.
 
 
-ACTIVITY - 4 Building the Chat Interface
-Task:7 Modify the HTML Structure to include a chat window and an input area for typing message. Style the chat window and input area using CSS.
-Task:8 Write a function to display received messages in the chat window. Add event listeners to send messages. When the user presses Enter or clicks on send button.
+ACTIVITY - 4 Updating Tasks
+Task:7 Add an "Edit" button to each task item in the task list. Write a function to populate the form with task details when the "Edit" button is clicked.
+Task:8 Write a function to update the task object in the array and refresh the task list display after editing a task.
 
 
-ACTIVITY - 5 Enhancing the Chat Application
-Task:9 Add user authentication to the chat application. Allow users to enter a username before joining the chat. Display usernames alongside their messages in the chat window.
-Task:10 Add CSSstyles to differentiate messages sent by different users. Add CSS animation or transitions to make the chat application more interactive and visually appealing.
+ACTIVITY - 5 Deleting Tasks
+Task:9 Add a "Delete" button to each task item in the task list. write a function to remove the task from the array and refresh the task list display when the "Delete" button is clicked.
+Task:10 Add a confirmation dialog before deleting a task to prevent accidental deletions.
