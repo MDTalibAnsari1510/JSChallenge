@@ -1,4 +1,4 @@
-Day 26: Projects - TaskManagement App
+Day 27: Projects - TaskManagement App
 
 ACTIVITY - 1 Setting Up the Project 
 Task:1 Initialize a new project directory and set up the basic HTML structure for the task managements app.
